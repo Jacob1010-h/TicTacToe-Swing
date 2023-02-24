@@ -1,8 +1,6 @@
 package tictactoe;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class View extends JFrame{
     private String turn = "X";
@@ -26,39 +24,39 @@ public class View extends JFrame{
         setVisible(true);
 
         topMid.addActionListener(e -> {
-            XorOCheck(topMid);
+            setTile(topMid);
             closeIfWinner();
         });
         midMid.addActionListener(e -> {
-            XorOCheck(midMid);
+            setTile(midMid);
             closeIfWinner();
         });
         bottomMid.addActionListener(e -> {
-            XorOCheck(bottomMid);
+            setTile(bottomMid);
             closeIfWinner();
         });
         rightMid.addActionListener(e -> {
-            XorOCheck(rightMid);
+            setTile(rightMid);
             closeIfWinner();
         });
         leftMid.addActionListener(e -> {
-            XorOCheck(leftMid);
+            setTile(leftMid);
             closeIfWinner();
         });
         rightTop.addActionListener(e -> {
-            XorOCheck(rightTop);
+            setTile(rightTop);
             closeIfWinner();
         });
         rightBottom.addActionListener(e -> {
-            XorOCheck(rightBottom);
+            setTile(rightBottom);
             closeIfWinner();
         });
         leftTop.addActionListener(e -> {
-            XorOCheck(leftTop);
+            setTile(leftTop);
             closeIfWinner();
         });
         leftBottom.addActionListener(e -> {
-            XorOCheck(leftBottom);
+            setTile(leftBottom);
             closeIfWinner();
         });
 
@@ -83,7 +81,7 @@ public class View extends JFrame{
         return true;
     }
 
-    public void XorOCheck(JButton button) {
+    public void setTile(JButton button) {
         if (!button.getText().isEmpty()) {
             return;
         }
